@@ -1,0 +1,21 @@
+diff --git a/04-countOfAllBooleans/countOfAllBooleans.js b/04-countOfAllBooleans/countOfAllBooleans.js
+index f0a8cba..fe08a06 100644
+--- a/04-countOfAllBooleans/countOfAllBooleans.js
++++ b/04-countOfAllBooleans/countOfAllBooleans.js
+@@ -1,5 +1,15 @@
+ function countOfAllBooleans(arr) {
+-  // Insert code here;
++	let booleanCount = 0;
++
++  // for each element, check for strict equality with true or false
++  for (const element of arr) {
++    // strict equality, "true" and "false" as string data types are not counted
++    if (element === true || element === false) {
++      booleanCount++;
++    }
++  }
++
++	return booleanCount;
+ }
+ 
+ // Do not edit this line;
