@@ -16,7 +16,7 @@ describe("the cutInHalfAndFloor(num) function", function() {
   })
 
   it("should pass auxillary test cases", function() {
-    let auxillaryTestCases = [20,40,60,80,99,105,221];
+    let auxillaryTestCases = [20,40,60,80,99,105,221,0,-5,-66,-2.2];
     let submittedSolution = cutInHalfAndFloor;
     expect(submittedSolution(auxillaryTestCases[0])).to.equal(10);
     expect(submittedSolution(auxillaryTestCases[1])).to.equal(20);
@@ -25,6 +25,10 @@ describe("the cutInHalfAndFloor(num) function", function() {
     expect(submittedSolution(auxillaryTestCases[4])).to.equal(49);
     expect(submittedSolution(auxillaryTestCases[5])).to.equal(52);
     expect(submittedSolution(auxillaryTestCases[6])).to.equal(110);
+    expect(submittedSolution(auxillaryTestCases[7])).to.equal(0);
+    expect(submittedSolution(auxillaryTestCases[8])).to.equal(-3);
+    expect(submittedSolution(auxillaryTestCases[9])).to.equal(-33);
+    expect(submittedSolution(auxillaryTestCases[10])).to.equal(-2);
   })
 
 })
