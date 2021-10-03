@@ -1,0 +1,19 @@
+diff --git a/07-countOfAllIndexMatchingNumbers/countOfAllIndexMatchingNumbers.js b/07-countOfAllIndexMatchingNumbers/countOfAllIndexMatchingNumbers.js
+index eaba026..46678b6 100644
+--- a/07-countOfAllIndexMatchingNumbers/countOfAllIndexMatchingNumbers.js
++++ b/07-countOfAllIndexMatchingNumbers/countOfAllIndexMatchingNumbers.js
+@@ -1,5 +1,13 @@
+ function countOfAllIndexMatchingNumbers(nums) {
+-  // Insert code here;
++  let indexMatchingNumberCount = 0;
++
++  for (let i = 0; i < nums.length; i++) {
++    if (nums[i] === i) {
++      indexMatchingNumberCount++;
++    }
++  }
++
++  return indexMatchingNumberCount;
+ }
+ 
+ // Do not edit this line;
