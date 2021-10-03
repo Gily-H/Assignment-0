@@ -1,5 +1,13 @@
 function countOfAllNumbersSmallerThanTarget(nums, target) {
-  // Insert code here;
+  let smallerThanTargetCount = 0;
+
+  for (const number of nums) {
+    if (number < target) {
+      smallerThanTargetCount++;
+    }
+  }
+
+  return smallerThanTargetCount;
 }
 
 // Do not edit this line;
