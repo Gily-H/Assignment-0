@@ -1,5 +1,13 @@
 function countOfAllEvenNumbers(nums) {
-	// Insert code here;
+	let evenNumberCount = 0;
+
+	for (const number of nums) {
+		if (number % 2 === 0) {
+			evenNumberCount++;
+		}
+	}
+
+	return evenNumberCount;
 }
 
 // Do not edit this line;
