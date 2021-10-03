@@ -27,4 +27,13 @@ describe("the greetFriend(name) function", function() {
     }
   })
 
+  // experiment adding a new unit test
+  it("should not contain extra whitespace around the name", function() {
+    let names = ["Gilman", "Jenny   ", "   Henry", "  Maggie  "]
+    expect(greetFriend(names[0])).to.equal("Hello, Gilman!")
+    expect(greetFriend(names[1])).to.equal("Hello, Jenny!")
+    expect(greetFriend(names[2])).to.equal("Hello, Henry!")
+    expect(greetFriend(names[3])).to.equal("Hello, Maggie!")
+  })
+
 })

@@ -1,0 +1,30 @@
+diff --git a/00-greetFriend/greetFriend.js b/00-greetFriend/greetFriend.js
+index 0729aa2..71d1e6d 100644
+--- a/00-greetFriend/greetFriend.js
++++ b/00-greetFriend/greetFriend.js
+@@ -1,5 +1,5 @@
+ function greetFriend(name) {
+-  // Insert code here;
++  return `Hello, ${name.trim()}!`
+ }
+ 
+ // Do not edit this line;
+diff --git a/00-greetFriend/greetFriend.test.js b/00-greetFriend/greetFriend.test.js
+index d530b0e..a8fc9be 100644
+--- a/00-greetFriend/greetFriend.test.js
++++ b/00-greetFriend/greetFriend.test.js
+@@ -27,4 +27,13 @@ describe("the greetFriend(name) function", function() {
+     }
+   })
+ 
++  // experiment adding a new unit test
++  it("should not contain extra whitespace around the name", function() {
++    let names = ["Gilman", "Jenny   ", "   Henry", "  Maggie  "]
++    expect(greetFriend(names[0])).to.equal("Hello, Gilman!")
++    expect(greetFriend(names[1])).to.equal("Hello, Jenny!")
++    expect(greetFriend(names[2])).to.equal("Hello, Henry!")
++    expect(greetFriend(names[3])).to.equal("Hello, Maggie!")
++  })
++
+ })
+\ No newline at end of file
