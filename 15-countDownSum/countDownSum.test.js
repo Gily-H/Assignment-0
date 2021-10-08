@@ -8,6 +8,7 @@ describe("the countDownSum(num) function", function () {
 
   let submittedSolution;
 
+  // call this function before each test case
   beforeEach(function() {
     submittedSolution = new StudentSolution();
   })
@@ -21,16 +22,22 @@ describe("the countDownSum(num) function", function () {
   })
 
   it("should be implemented recursively", function () {
+
+    // instantiate spy-object based on specified class method
+    // params: object instance, instance method name
     let mySpy = sinon.spy(submittedSolution, "countDownSum");
     
+    // callCount = number of method calls
     submittedSolution.countDownSum(5);
     expect(mySpy.callCount).to.equal(5);
     
+    // reset state of the spy object
     mySpy.resetHistory();
 
     submittedSolution.countDownSum(10);
     expect(mySpy.callCount).to.equal(10);
 
+    // replace spy with the original instance method
     mySpy.restore();
   })
 

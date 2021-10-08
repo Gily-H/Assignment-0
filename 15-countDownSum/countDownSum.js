@@ -1,6 +1,12 @@
 class MySolution {
   countDownSum(num) {
-    // Insert code here;
+    // base case
+    if (num === 1) {
+      return 1;
+    }
+
+    // recursive call
+    return num + this.countDownSum(num - 1);
   }
 }
 

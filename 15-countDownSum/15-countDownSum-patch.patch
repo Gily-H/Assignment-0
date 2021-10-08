@@ -1,0 +1,53 @@
+diff --git a/15-countDownSum/countDownSum.js b/15-countDownSum/countDownSum.js
+index 557d5dd..1aa84fd 100644
+--- a/15-countDownSum/countDownSum.js
++++ b/15-countDownSum/countDownSum.js
+@@ -1,6 +1,12 @@
+ class MySolution {
+   countDownSum(num) {
+-    // Insert code here;
++    // base case
++    if (num === 1) {
++      return 1;
++    }
++
++    // recursive call
++    return num + this.countDownSum(num - 1);
+   }
+ }
+ 
+diff --git a/15-countDownSum/countDownSum.test.js b/15-countDownSum/countDownSum.test.js
+index 84d32b5..82be1e9 100644
+--- a/15-countDownSum/countDownSum.test.js
++++ b/15-countDownSum/countDownSum.test.js
+@@ -8,6 +8,7 @@ describe("the countDownSum(num) function", function () {
+ 
+   let submittedSolution;
+ 
++  // call this function before each test case
+   beforeEach(function() {
+     submittedSolution = new StudentSolution();
+   })
+@@ -21,16 +22,22 @@ describe("the countDownSum(num) function", function () {
+   })
+ 
+   it("should be implemented recursively", function () {
++
++    // instantiate spy-object based on specified class method
++    // params: object instance, instance method name
+     let mySpy = sinon.spy(submittedSolution, "countDownSum");
+     
++    // callCount = number of method calls
+     submittedSolution.countDownSum(5);
+     expect(mySpy.callCount).to.equal(5);
+     
++    // reset state of the spy object
+     mySpy.resetHistory();
+ 
+     submittedSolution.countDownSum(10);
+     expect(mySpy.callCount).to.equal(10);
+ 
++    // replace spy with the original instance method
+     mySpy.restore();
+   })
+ 
