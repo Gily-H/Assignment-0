@@ -7,6 +7,8 @@ describe("the pairSum(nums, target) function", function() {
 
   it("should throw an error if the length of `nums` array is 1 or lower", function() {
     let submittedSolution = pairSum;
+    // assertions for throwing an error expect a function argument
+    // wrap the method call inside a function
     expect(function() { submittedSolution([], 9000) }).to.throw();
     expect(function() { submittedSolution([9], 9000) }).to.throw();
   })
