@@ -1,6 +1,6 @@
 # 13-isPalindrome
 
-For this exercise (`isPalindrome.js`), you are tasked to write out solution code for a function titled `isPalindrome(word)`. This function will take in one argument, a `string` referenced as `word`. This function will out put a `boolean` value indicating whether the input `word` is a palindrome. If the input `word` is a palindrome, return `true`. If the input `word` is not a palindrome, return `false`. A palindrome is a word that reads the same forwards as it does backwards.
+For this exercise (`isPalindrome.js`), you are tasked to write out solution code for a function titled `isPalindrome(word)`. This function will take in one argument, a `string` referenced as `word`. This function will output a `boolean` value indicating whether the input `word` is a palindrome. If the input `word` is a palindrome, return `true`. If the input `word` is not a palindrome, return `false`. A palindrome is a word that reads the same forwards as it does backwards.
 
 _In other words_:
 
