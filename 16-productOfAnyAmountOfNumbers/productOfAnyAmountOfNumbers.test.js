@@ -12,21 +12,23 @@ describe("the productOfAnyAmountOfNumbers(...args) function", function() {
   })
 
   it("should be able to take in an indefinite amount of arguments", function() {
-    let submittedSolution = productOfAnyAmountOfNumbers;
-    let mySpy = sinon.spy(submittedSolution);
-    
-    mySpy(2,4);
-    let spyCallA = mySpy.getCall(0);
-    expect(spyCallA.args).to.have.lengthOf(2);
+		let submittedSolution = productOfAnyAmountOfNumbers;
 
-    mySpy(2,4,6);
-    let spyCallB = mySpy.getCall(1);
-    expect(spyCallB.args).to.have.lengthOf(3);
+		// instantiate spy object based on function passed in
+		let mySpy = sinon.spy(submittedSolution);
 
-    mySpy(2,4,6,8);
-    let spyCallC = mySpy.getCall(2);
-    expect(spyCallC.args).to.have.lengthOf(4);
-  })
+		mySpy(2, 4);  // method call
+		let spyCallA = mySpy.getCall(0); // spy on the very first method call
+		expect(spyCallA.args).to.have.lengthOf(2); // .args gives the args in the first method call
+
+		mySpy(2, 4, 6);  // method call
+		let spyCallB = mySpy.getCall(1); // spy on the second method call
+		expect(spyCallB.args).to.have.lengthOf(3); // .args gives the args in the second method call
+
+		mySpy(2, 4, 6, 8);  // method call
+		let spyCallC = mySpy.getCall(2); // spy on the third method call
+		expect(spyCallC.args).to.have.lengthOf(4); // .args gives the args in the third method call
+	})
 
   it("should return the product of all of the numbers that were passed in as arguments", function() {
     let submittedSolution = productOfAnyAmountOfNumbers(7,7,10);
@@ -42,6 +44,7 @@ describe("the productOfAnyAmountOfNumbers(...args) function", function() {
     expect(submittedSolution(2,5,10)).to.equal(100);
     expect(submittedSolution(10,11,12,13,14,15)).to.equal(3603600);
 
+    // test case using random numbers
     let randomNumberA = Math.round(Math.random() * 10);
     let randomNumberB = Math.round(Math.random() * 10);
     let randomNumberC = Math.round(Math.random() * 10);
