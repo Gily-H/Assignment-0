@@ -13,6 +13,7 @@ describe("the binarySearch(nums, target) function", function() {
   })
 
   it("should be an inherited instance method", function() {
+    // respondTo() asserts that the instance object has a method with the given name
     expect(submittedSolution, "be sure to write this function as a class' instance method").to.respondTo("binarySearch");
   })
 
@@ -42,6 +43,7 @@ describe("the binarySearch(nums, target) function", function() {
     
     submittedSolution.binarySearch([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], 1);
     expect(mySpy.callCount).to.be.greaterThan(1);
+    // closeTo() takes an expected value, and an acceptable +/- range
     expect(mySpy.callCount).to.be.closeTo(4,1);
     
     mySpy.resetHistory();
@@ -55,8 +57,8 @@ describe("the binarySearch(nums, target) function", function() {
 
     mySpy.resetHistory();
 
-    let exampleArrB = Array.from({ length: 1000 });
-    exampleArrB = exampleArrB.map((_, idx) => idx + 1);
+    let exampleArrB = Array.from({ length: 1000 }); // create array of length 1000 (undefined elements)
+    exampleArrB = exampleArrB.map((_, idx) => idx + 1); // (element, index) maps values to array elements
 
     submittedSolution.binarySearch(exampleArrB, 2);
     expect(mySpy.callCount).to.be.greaterThan(1);
@@ -69,6 +71,7 @@ describe("the binarySearch(nums, target) function", function() {
   it("should not mutate the input array `nums`", function() {
     let sampleNums = [10,20,30,40,50,60,70,80,90,100];
     submittedSolution.binarySearch(sampleNums, 150);
+    // eql() checks for deep equality between the individual elements in the array, not the array reference
     expect(sampleNums).to.eql([10,20,30,40,50,60,70,80,90,100]);
   })
 
