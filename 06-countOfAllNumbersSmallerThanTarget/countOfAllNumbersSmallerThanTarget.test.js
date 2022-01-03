@@ -16,15 +16,14 @@ describe("the countOfAllNumbersSmallerThanTarget(nums) function", function() {
   })
 
   it("should pass auxillary test cases", function() {
-    let auxillaryNums = [[1,2], [1,2,3], [1,2,3,4], [888, 23,62,100,5,4,3,2,1], [9000], [2,6,8,1,33]];
-    let auxillaryTargets = [5, 5, 2, 500, 22, 8]
+    let auxillaryNums = [[1,2], [1,2,3], [1,2,3,4], [888, 23,62,100,5,4,3,2,1], [9000]];
+    let auxillaryTargets = [5, 5, 2, 500, 22]
     let submittedSolution = countOfAllNumbersSmallerThanTarget;
     expect(submittedSolution(auxillaryNums[0], auxillaryTargets[0])).to.equal(2);
     expect(submittedSolution(auxillaryNums[1], auxillaryTargets[1])).to.equal(3);
     expect(submittedSolution(auxillaryNums[2], auxillaryTargets[2])).to.equal(1);
     expect(submittedSolution(auxillaryNums[3], auxillaryTargets[3])).to.equal(8);
     expect(submittedSolution(auxillaryNums[4], auxillaryTargets[4])).to.equal(0);
-    expect(submittedSolution(auxillaryNums[5], auxillaryTargets[5])).to.equal(3);
   })
 
   it("should not conduct mutative operations on the input array", function() {

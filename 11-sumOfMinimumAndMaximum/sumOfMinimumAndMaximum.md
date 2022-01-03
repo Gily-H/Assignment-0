@@ -31,7 +31,7 @@ function sumOfMinimumAndMaximum(nums) {
   // Insert code here;
 }
 
-sumOfMinimumAndMaximum([2,4,5,6,23]) -----> 5;
+sumOfMinimumAndMaximum([2,4,5,6,23]) -----> 25;
 ```
 
 The test suite (`sumOfMinimumAndMaximum.test.js`) is ultimately designed to verify four core features and expectations:

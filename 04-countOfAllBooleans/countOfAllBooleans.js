@@ -3,7 +3,6 @@ function countOfAllBooleans(arr) {
 
   // for each element, check for strict equality with true or false
   for (const element of arr) {
-    // strict equality, "true" and "false" as string data types are not counted
     if (element === true || element === false) {
       booleanCount++;
     }

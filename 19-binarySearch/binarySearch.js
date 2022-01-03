@@ -22,8 +22,7 @@ class MySolution {
     // else if target smaller, get the first half of the array
     nums[mid] < target ? start = mid + 1 : end = mid - 1;
     
-    // slice() - substrings the array without altering the original
-    // start value included, end value excluded
+    // slice() - creates a new array without altering the original
 		let subArray = nums.slice(start, end + 1);
       // console.log("This is the subarray", subArray);
       // console.log();

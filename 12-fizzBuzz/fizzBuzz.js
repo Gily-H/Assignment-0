@@ -5,7 +5,7 @@ function fizzBuzz(start, end) {
   for (let i = start; i <= end; i++) {
     let result = i;
   
-    // check for both conditions first, then individual conditions
+    // check if multiple of both 3 and 5 first
     if (i % 3 === 0 && i % 5 === 0) {
       result = "FizzBuzz";
     } else if (i % 3 === 0) {

@@ -5,7 +5,7 @@ function frequencyCounter(word) {
 
     // if letter already present, increment frequency, else add new letter with freq 1
     freqTracker.hasOwnProperty(letter) ? freqTracker[letter]++ : freqTracker[letter] = 1;
-    console.log(freqTracker);
+    // console.log(freqTracker);
   }
 
   return freqTracker;
